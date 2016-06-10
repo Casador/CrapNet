@@ -21,6 +21,14 @@ public class qnetd
                QServer.listen(port);
                break;
            }
+           else if (args[argI].equals("--help"))
+           {
+               showHelp();
+           }
+           else
+           {
+               System.out.println("Command \" + args[argI] + "\" not found.");
+           }
       }
 
       int port = 0; //server's port
