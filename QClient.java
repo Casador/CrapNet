@@ -2,6 +2,7 @@
 import java.net.Socket;
 import java.net.InetAddress;
 import java.io.IOException;
+import java.io.DataOutputStream;
 
 public class QClient
 {
@@ -21,8 +22,9 @@ public class QClient
       {
          Socket sock = new Socket(server, port);
          
-         sock.
+         DataOutputStream writer = new DataOutputStream(sock.getOutputStream());
          
+         writer.write(author + "\n");
          sock.close(); //do me
       }
       catch (IOException err)
