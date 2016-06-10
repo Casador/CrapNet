@@ -10,10 +10,10 @@ public class QClient
    private int port;
    private String server;
 
-   public QClient(String server, int port)
+   public QClient(String serverIP, int port)
    {
       this.port = port;
-      this.server = server;
+      this.serverIP = serverIP;
    }
    
    public void post(String author, String title, String body)
