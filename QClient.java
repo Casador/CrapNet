@@ -24,7 +24,7 @@ public class QClient
          
          DataOutputStream writer = new DataOutputStream(sock.getOutputStream());
          
-         writer.write(author + "\n");
+         writer.writeChars(author + "\n" + title + "\n" + body);
          sock.close(); //do me
       }
       catch (IOException err)
