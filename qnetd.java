@@ -21,6 +21,10 @@ public class qnetd
                {
                    startServer();
                }
+               else if (args[argI].equals("--exchanger"))
+               {
+                   startExchanger();
+               }
                else if (args[argI].equals("--help"))
                {
                    showHelp();
@@ -60,6 +64,11 @@ public class qnetd
           }
       }
       
+   }
+
+   public static void startExchanger()
+   {
+       QExchanger.listen(port);
    }
 
    public static void showHelp()
