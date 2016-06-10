@@ -8,7 +8,7 @@ public class QClient
 {
 
    private int port;
-   private String server;
+   private String serverIP;
 
    public QClient(String serverIP, int port)
    {
@@ -20,7 +20,7 @@ public class QClient
    {
       try
       {
-         Socket sock = new Socket(server, port);
+         Socket sock = new Socket(serverIP, port);
          
          DataOutputStream writer = new DataOutputStream(sock.getOutputStream());
          
