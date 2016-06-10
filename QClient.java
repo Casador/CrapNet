@@ -10,6 +10,10 @@ public class QClient
    private int port;
    private String serverIP;
 
+   public QClient()
+   {
+   }
+
    public QClient(String serverIP, int port)
    {
       this.port = port;
