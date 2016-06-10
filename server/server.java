@@ -93,6 +93,8 @@ public class QNETServer
          }
       }
       
+      me.close();
+      
       if (command.equalsIgnoreCase("post"))
       {
          writePost(others);
