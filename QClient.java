@@ -21,14 +21,11 @@ public class QClient
       try
       {
          Socket sock = new Socket(serverIP, port);
-         
          DataOutputStream writer = new DataOutputStream(sock.getOutputStream());
-         
-         writer.writeChars(author + "\n" + title + "\n" + body);
+         writer.writeChars("post\n" + author + "\n" + title + "\n" + body);
          writer.flush();
          writer.close();
          //sock.close(); //writer.close() does this for us
-
       }
       catch (IOException err)
       {
