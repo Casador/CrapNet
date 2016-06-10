@@ -13,7 +13,7 @@ public class qnetd
    {
       
       int argLen = args.len();
-      into count = 0;
+      int count = 0;
       for (int argI = 0; argI < argLen; argI++)
       {
            if (count == 0)
