@@ -28,6 +28,7 @@ public class qnetd
            else
            {
                System.out.println("Command \" + args[argI] + "\" not found.");
+               System.exit(69);
            }
       }
 
