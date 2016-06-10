@@ -1,6 +1,5 @@
 //QNET client lib
 import java.net.Socket;
-import java.net.InetAddress;
 import java.io.IOException;
 import java.io.DataOutputStream;
 
