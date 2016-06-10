@@ -38,27 +38,6 @@ public class QNETServer
       }
    }
    
-   public static void writePost(String postData)
-   {
-   
-      try
-      {
-         PrintWriter d = new PrintWriter(new FileWriter(""+Math.random()*Math.random()));
-         Scanner d2 = new Scanner(postData);
-         while (d2.hasNextLine())
-         {
-            d.println(d2.nextLine());
-         }
-         d2.close();
-         d.close();
-      }
-      catch(IOException err)
-      {
-         System.out.println("Error creating post!");
-      }
-   
-   }
-   
    public static void eval(String data)
    {
    
