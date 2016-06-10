@@ -18,9 +18,9 @@ public class qnetd
       {
            if (count == 0)
            {
-               if (args[argI].equals("--start"))
+               if (args[argI].equals("--server"))
                {
-                   QServer.listen(port);
+                   start();
                }
                else if (args[argI].equals("--help"))
                {
@@ -35,28 +35,36 @@ public class qnetd
            count++;
       }
 
-      int port = 0; //server's port
+      public static void startup() //normal start
+      {
+          System.out.println("[qnetd] Starting QServer...");
+          System.out.println("[qnetd] I shall hang here till thee control-c-mee.");
+          try
+          {
+             into port = 0;
+             Scanner reader = new Scanner(new File("qnet_server.conf"));
+             while (reader.hasNextLine())
+             {
+                Scanner f = new Scanner(reader.nextLine()).useDelimiter("=");
+                f.next();
+                port = f.nextInt();
+                f.close();
+             }
+             reader.close();
+             QServer.listen(port);
+          }
+          catch (IOException err)
+          {
+             System.out.println("Error: Config file \"qnet_server.conf\" not found or could not be opened.");
+             System.out.println("Error message: " + err.getMessage());
+             System.exit(1);
+          }
+      }
    
-      try
-      {
-         Scanner reader = new Scanner(new File("qnet_server.conf"));
-         while (reader.hasNextLine())
-         {
-            Scanner f = new Scanner(reader.nextLine()).useDelimiter("=");
-            f.next();
-            port = f.nextInt();
-            f.close();
-         }
-         reader.close();
-         QServer.listen(port);
-      }
-      catch (IOException err)
-      {
-         System.out.println("Error: Config file \"qnet_server.conf\" not found or could not be opened.");
-         System.out.println("Error message: " + err.getMessage());
-         System.exit(1);
-      }
+      
    }
+
+    
 
    public static void showHelp()
    {
