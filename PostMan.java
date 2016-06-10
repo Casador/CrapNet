@@ -16,7 +16,9 @@ public class PostMan
       {
          PrintWriter writer = new PrintWriter(new FileWriter(getPostID(author+title+body)));
          
-         writer.println();
+         writer.println(author);
+         writer.println(title);
+         writer.println(body);
          
          
          writer.close();
