@@ -118,13 +118,15 @@ public class QNETServer
             String data = new DataInputStream(sock.getInputStream()).readUTF();            
             eval(data);
             
+            //sock.close();
             
+            //servSock.close();
             
          }
          catch (IOException err)
          {
          
-            System.out.println("Error starting server: " + err.get);
+            System.out.println("Error starting server: " + err);
             System.exit(2);
          
          }
