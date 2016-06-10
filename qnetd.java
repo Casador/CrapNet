@@ -13,9 +13,11 @@ public class qnetd
    {
       
       int argLen = args.len();
-
+      into count = 0;
       for (int argI = 0; argI < argLen; argI++)
       {
+           if (count == 0)
+           {
            if (args[argI].equals("--start"))
            {
                QServer.listen(port);
@@ -30,6 +32,8 @@ public class qnetd
                System.out.println("Command \" + args[argI] + "\" not found.");
                System.exit(69);
            }
+           }
+           count++;
       }
 
       int port = 0; //server's port
