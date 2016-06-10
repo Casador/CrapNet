@@ -67,13 +67,13 @@ public class QNETServer
       String command = "";
       String others = "";
       
-      int count = 0;
+      boolean cmdDone = false;
       while(me.hasNextLine())
       {
-         if (count == 0)
+         if (cmdDone == false)
          {
             command = me.nextLine();
-            count=1;
+            cmdDone = true;
          }
          else
          {
