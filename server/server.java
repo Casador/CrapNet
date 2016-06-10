@@ -7,6 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.PrintWriter;
 import java.io.FileWriter;
+import java.io.DataInputStream;
 
 public class QNETServer
 {
