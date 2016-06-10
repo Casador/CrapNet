@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.FileWriter;
 import java.until.Scanner;
+//as usual - sexy Jedis goes hete
 
 public class PostMan
 {
@@ -20,29 +21,23 @@ public class PostMan
       try
       {
          PrintWriter writer = new PrintWriter(new FileWriter(getPostID(author+title+body)));
-         
          writer.println(author);
          writer.println(title);
          writer.println(body);
-         
-         
-         writer.close();
-      
+        //put Jedi's here
+         writer.close()
       }
       catch(IOException err)
       {
          System.out.println("Error saving post file.");
       }
-   
    }
 
    public static void eval(String data)
    {
-   
       Scanner packetReader = new Scanner(data);
       
       String command = "";
-      
       boolean cmdDone = false;
       while(packetReader.hasNextLine())
       {
@@ -62,9 +57,7 @@ public class PostMan
             }
          }
       }
-      
       packetReader.close();
-   
    }
 
 }
