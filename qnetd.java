@@ -19,15 +19,13 @@ public class qnetd
            {
                if (args[argI].equals("--server"))
                {
-                   startServer();
-               }
-               else if (args[argI].equals("--exchanger"))
-               {
-                   startExchanger();
+                   startup();
+                   break;
                }
                else if (args[argI].equals("--help"))
                {
                    showHelp();
+                   break;
                }
                else
                {
@@ -38,7 +36,7 @@ public class qnetd
            count++;
       }
 
-      public static void startServer()
+      public static void startup()
       {
           System.out.println("[qnetd] Info: Starting QServer...");
           System.out.println("[qnetd] Info: I shall hang here till thee control-c-mee.");
@@ -64,11 +62,6 @@ public class qnetd
           }
       }
       
-   }
-
-   public static void startExchanger()
-   {
-       QExchanger.listen(port);
    }
 
    public static void showHelp()
