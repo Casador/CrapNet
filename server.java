@@ -88,7 +88,7 @@ public class QNETServer
       
       if (command.equalsIgnoreCase("post"))
       {
-         writePost(others);
+         PostMan.post(packetReader.next(),packetReader.next(),packetReader.next());
       }
    
    }
