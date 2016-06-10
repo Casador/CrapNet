@@ -19,6 +19,7 @@ public class qnetd
            if (args[argI].equals("--start"))
            {
                QServer.listen(port);
+               break;
            }
       }
 
