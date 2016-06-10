@@ -8,6 +8,7 @@ import java.net.Socket;
 import java.io.PrintWriter;
 import java.io.FileWriter;
 import java.io.DataInputStream;
+import java.io.FileNotFoundException;
 
 public class QNETServer
 {
@@ -28,18 +29,14 @@ public class QNETServer
             f.close();
          }
          reader.close();
+         listen(port);
       }
       catch (IOException err)
       {
-         System.out.println("Error opening config file \"qnet_server.conf\": " + err.getMessage());
+         System.out.println("Error: Config file \"qnet_server.conf\" not found or could not be opened.");
+         System.out.println("Error message: " + err.getMessage());
          System.exit(1);
       }
-      finally
-      {
-         listen(port);
-      }
-         
-   
    }
    
    public static void writePost(String postData)
@@ -109,12 +106,10 @@ public class QNETServer
             //Save packet data
             String data = new DataInputStream(sock.getInputStream()).readUTF();            
             //System.out.println(data);
-            eval(data);
+            eval(data);//return something maybe
             
             //sock.close();
-            
             servSock.close(); //apparently close me
-            
          }
          catch (IOException err)
          {
