@@ -1,11 +1,12 @@
-//CrapNet server
-a//Server
+//Server
 
 import java.io.IOException;
 import java.io.File;
 import java.util.Scanner;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.io.PrintWriter;
+import java.io.FileWriter;
 
 public class QNETServer
 {
