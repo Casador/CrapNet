@@ -61,7 +61,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel5.setText("String3");
 
-        jButton2.setText("Do");
+        jButton2.setText("Send");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
