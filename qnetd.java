@@ -57,4 +57,9 @@ public class qnetd
          System.exit(1);
       }
    }
+
+   public static void showHelp()
+   {
+       System.out.println("You had one job Matthew Seamen Carter. And you fucked it up.");
+   }
 }
