@@ -8,7 +8,6 @@ import java.net.Socket;
 import java.io.PrintWriter;
 import java.io.FileWriter;
 import java.io.DataInputStream;
-import java.io.FileNotFoundException;
 
 public class QNETServer
 {
