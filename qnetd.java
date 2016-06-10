@@ -24,7 +24,7 @@ public class qnetd
                }
                else if (args[argI].equals("--help"))
                {
-               showHelp();
+                   showHelp();
                }
                else
                {
