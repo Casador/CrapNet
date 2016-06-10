@@ -18,19 +18,19 @@ public class qnetd
       {
            if (count == 0)
            {
-           if (args[argI].equals("--start"))
-           {
-               QServer.listen(port);
-           }
-           else if (args[argI].equals("--help"))
-           {
+               if (args[argI].equals("--start"))
+               {
+                   QServer.listen(port);
+               }
+               else if (args[argI].equals("--help"))
+               {
                showHelp();
-           }
-           else
-           {
-               System.out.println("Command \" + args[argI] + "\" not found.");
-               System.exit(69);
-           }
+               }
+               else
+               {
+                   System.out.println("Command \" + args[argI] + "\" not found.");
+                   System.exit(69);
+               }
            }
            count++;
       }
