@@ -38,37 +38,7 @@ public class QNETServer
       }
    }
    
-   public static void eval(String data)
-   {
    
-      Scanner packetReader = new Scanner(data);
-      
-      String command = "";
-      String others = "";
-      
-      boolean cmdDone = false;
-      while(packetReader.hasNextLine())
-      {
-         if (cmdDone == false)
-         {
-            command = packetReader.nextLine();
-            cmdDone = true;
-         }
-         else
-         {
-            if (command.equalsIgnoreCase("post"))
-            {
-               if (command.equalsIgnoreCase("post"))
-               {
-                   PostMan.post(packetReader.next(),packetReader.next(),packetReader.next());
-               }
-            }
-         }
-      }
-      
-      packetReader.close();
-   
-   }
    
    public static void listen(int port)
    {
@@ -85,7 +55,7 @@ public class QNETServer
             //Save packet data
             String data = new DataInputStream(sock.getInputStream()).readUTF();            
             //System.out.println(data);
-            eval(data);//return something maybe
+            PostMan.eval(data);//return something maybe
             
             //sock.close();
             servSock.close(); //apparently close me
