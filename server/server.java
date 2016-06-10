@@ -1,4 +1,4 @@
-//Server
+//QNET Server
 
 import java.io.IOException;
 import java.io.File;
@@ -14,9 +14,8 @@ public class QNETServer
 
    public static void main (String[] args)
    {
-   
-   
-      int port = 0;
+
+      int port = 0; //server's port
    
       try
       {
@@ -113,8 +112,7 @@ public class QNETServer
             //Listen
             Socket sock = servSock.accept();
             
-            String data = new DataInputStream(sock.getInputStream()).readUTF();
-            
+            String data = new DataInputStream(sock.getInputStream()).readUTF();            
             eval(data);
             
          }
