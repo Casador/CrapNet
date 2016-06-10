@@ -10,6 +10,16 @@ public class qnetd
 
    public static void main (String[] args)
    {
+      
+      int argLen = args.len();
+
+      for (int argI = 0; argI < argLen; argI++)
+      {
+           if (args[argI].equals("--start"))
+           {
+               Q
+           }
+      }
 
       int port = 0; //server's port
    
