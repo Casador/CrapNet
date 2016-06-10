@@ -62,26 +62,29 @@ public class QNETServer
    public static void eval(String data)
    {
    
-      Scanner me = new Scanner(data);
+      Scanner packetReader = new Scanner(data);
       
       String command = "";
       String others = "";
       
       boolean cmdDone = false;
-      while(me.hasNextLine())
+      while(packetReader.hasNextLine())
       {
          if (cmdDone == false)
          {
-            command = me.nextLine();
+            command = packetReader.nextLine();
             cmdDone = true;
          }
          else
          {
-            others=others+me.nextLine();
+            if (command.equalsIgnoreCase("post"))
+            {
+               
+            }
          }
       }
       
-      me.close();
+      packetReader.close();
       
       if (command.equalsIgnoreCase("post"))
       {
