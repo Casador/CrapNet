@@ -48,7 +48,7 @@ public class qnetd
             f.close();
          }
          reader.close();
-         listen(port);
+         QServer.listen(port);
       }
       catch (IOException err)
       {
