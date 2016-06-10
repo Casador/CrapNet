@@ -1,6 +1,5 @@
 //QNetd
-//The QNet Server frontend
-//this code is broken I know
+//The QNet Server and Exchanger frontend
 
 import java.io.IOException;
 import java.until.Scanner;
@@ -20,7 +19,7 @@ public class qnetd
            {
                if (args[argI].equals("--server"))
                {
-                   start();
+                   startServer();
                }
                else if (args[argI].equals("--help"))
                {
@@ -29,16 +28,16 @@ public class qnetd
                else
                {
                    System.out.println("Command \" + args[argI] + "\" not found.");
-                   System.exit(69);
+                   System.exit(1);
                }
            }
            count++;
       }
 
-      public static void startup() //normal start
+      public static void startServer()
       {
-          System.out.println("[qnetd] Starting QServer...");
-          System.out.println("[qnetd] I shall hang here till thee control-c-mee.");
+          System.out.println("[qnetd] Info: Starting QServer...");
+          System.out.println("[qnetd] Info: I shall hang here till thee control-c-mee.");
           try
           {
              into port = 0;
@@ -55,16 +54,13 @@ public class qnetd
           }
           catch (IOException err)
           {
-             System.out.println("Error: Config file \"qnet_server.conf\" not found or could not be opened.");
-             System.out.println("Error message: " + err.getMessage());
-             System.exit(1);
+             System.out.println("[qnetd] Error: Config file \"qnet_server.conf\" not found or could not be opened.");
+             System.out.println("[qnetd] Reason: " + err.getMessage());
+             System.exit(2);
           }
       }
-   
       
    }
-
-    
 
    public static void showHelp()
    {
