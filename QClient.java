@@ -7,9 +7,9 @@ public class QClient
 {
 
    private int port;
-   private InetAddress server;
+   private String server;
 
-   public QClient(InetAddress server, int port)
+   public QClient(String server, int port)
    {
       this.port = port;
       this.server = server;
