@@ -20,31 +20,23 @@ public class QNETServer
       try
       {
          Scanner reader = new Scanner(new File("qnet_server.conf"));
-         
          while (reader.hasNextLine())
          {
-         
             Scanner f = new Scanner(reader.nextLine()).useDelimiter("=");
             f.next();
             port = f.nextInt();
             f.close();
-         
          }
-         
          reader.close();
       }
       catch (IOException err)
       {
-      
          System.out.println("Error opening config file \"qnet_server.conf\": " + err.getMessage());
          System.exit(1);
-      
       }
       finally
       {
-      
          listen(port);
-      
       }
          
    
@@ -113,7 +105,7 @@ public class QNETServer
             ServerSocket servSock = new ServerSocket(port);
             //Listen
             Socket sock = servSock.accept();
-            
+            System.out.println(sock); //connection is being made
             //Save packet data
             String data = new DataInputStream(sock.getInputStream()).readUTF();            
             eval(data);
