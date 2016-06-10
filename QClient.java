@@ -15,11 +15,13 @@ public class QClient
       this.server = server;
    }
    
-   public void post()
+   public void post(String author, String title, String body)
    {
       try
       {
          Socket sock = new Socket(server, port);
+         
+         sock.
          
          sock.close(); //do me
       }
