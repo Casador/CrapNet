@@ -1,5 +1,6 @@
 //QNetd
 //The QNet Server frontend
+//this code is broken I know
 
 import java.io.IOException;
 import java.until.Scanner;
@@ -17,7 +18,7 @@ public class qnetd
       {
            if (args[argI].equals("--start"))
            {
-               Q
+               QServer.listen(port);
            }
       }
 
