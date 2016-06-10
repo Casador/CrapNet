@@ -1,3 +1,7 @@
+//PostMan
+//Manages the creation, retrieval and listing of posts (on a redis server)
+//Part of the server stack
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.FileWriter;
