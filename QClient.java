@@ -20,6 +20,8 @@ public class QClient
       try
       {
          Socket sock = new Socket(server, port);
+         
+         sock.close(); //do me
       }
       catch (IOException err)
       {
