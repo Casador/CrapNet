@@ -6,13 +6,18 @@ import java.io.DataOutputStream;
 
 public class QClient
 {
+    public QClient() {
+    }
+     public void setPort(int port) {
+        this.port = port;
+    }
+      public void setServerIP(String serverIP) {
+        this.serverIP = serverIP;
+    }
+   
 
    private int port;
    private String serverIP;
-
-   public QClient()
-   {
-   }
 
    public QClient(String serverIP, int port)
    {
