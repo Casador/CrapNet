@@ -105,14 +105,15 @@ public class QNETServer
             ServerSocket servSock = new ServerSocket(port);
             //Listen
             Socket sock = servSock.accept();
-            System.out.println(sock); //connection is being made
+            //System.out.println(sock); //connection is being made
             //Save packet data
             String data = new DataInputStream(sock.getInputStream()).readUTF();            
+            //System.out.println(data);
             eval(data);
             
             //sock.close();
             
-            //servSock.close();
+            servSock.close(); //apparently close me
             
          }
          catch (IOException err)
