@@ -58,17 +58,15 @@ public class QNETServer
          {
             if (command.equalsIgnoreCase("post"))
             {
-               
+               if (command.equalsIgnoreCase("post"))
+               {
+                   PostMan.post(packetReader.next(),packetReader.next(),packetReader.next());
+               }
             }
          }
       }
       
       packetReader.close();
-      
-      if (command.equalsIgnoreCase("post"))
-      {
-         PostMan.post(packetReader.next(),packetReader.next(),packetReader.next());
-      }
    
    }
    
