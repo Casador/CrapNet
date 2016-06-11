@@ -1,4 +1,6 @@
 //QNET client lib
+//This library is used by clients for communicating with a QServer
+
 import java.net.Socket;
 import java.io.IOException;
 import java.io.DataOutputStream;
