@@ -5,7 +5,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.FileWriter;
-import java.until.Scanner;
+import java.util.Scanner;
 //as usual - sexy Jedis goes hete
 
 public class PostMan
@@ -25,7 +25,7 @@ public class PostMan
          writer.println(title);
          writer.println(body);
         //put Jedi's here
-         writer.close()
+         writer.close();
       }
       catch(IOException err)
       {
@@ -52,7 +52,7 @@ public class PostMan
             {
                if (command.equalsIgnoreCase("post"))
                {
-                   post(packetReader.next(),packetReader.next(),packetReader.next());
+                   addPost(packetReader.next(),packetReader.next(),packetReader.next());
                }
             }
          }
