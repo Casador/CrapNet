@@ -11,7 +11,7 @@ public class qnetd
    public static void main (String[] args)
    {
       
-      if (args.len() == 0)
+      if (args.length) == 0)
       {
          startup();
       }
